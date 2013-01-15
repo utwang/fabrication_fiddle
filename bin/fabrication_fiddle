@@ -1,0 +1,13 @@
+#! /usr/bin/env ruby
+
+$LOAD_PATH.push File.expand_path('lib')
+$LOAD_PATH.push File.expand_path('fabrication/lib/')
+
+require 'fabrication'
+require 'user'
+require 'pry-debugger'
+
+user = User.new('John', 'Butler', 'jb@music.com', :male)
+
+p user.full_name
+p Fabricate(:user).full_name
